@@ -12,12 +12,12 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm border-b">
-        <div class="max-w-6xl mx-auto px-6 py-4">
-            <div class="flex space-x-8">
-                <button onclick="showSection('home')" class="nav-btn text-lg font-medium text-blue-600 border-b-2 border-blue-600">Home</button>
-                <button onclick="showSection('cv')" class="nav-btn text-lg font-medium text-gray-600 hover:text-blue-600">CV</button>
-                <button onclick="showSection('research')" class="nav-btn text-lg font-medium text-gray-600 hover:text-blue-600">Research</button>
+    <nav class="bg-yellow-800 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-6">
+            <div class="flex space-x-12 justify-center">
+                <button onclick="showSection('home')" class="nav-btn text-xl font-medium text-white hover:text-yellow-200 transition-colors">Home</button>
+                <button onclick="showSection('cv')" class="nav-btn text-xl font-medium text-white hover:text-yellow-200 transition-colors">CV</button>
+                <button onclick="showSection('research')" class="nav-btn text-xl font-medium text-white hover:text-yellow-200 transition-colors">Research</button>
             </div>
         </div>
     </nav>
@@ -145,13 +145,13 @@
             // Update navigation styling
             const navButtons = document.querySelectorAll('.nav-btn');
             navButtons.forEach(btn => {
-                btn.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
-                btn.classList.add('text-gray-600');
+                btn.classList.remove('text-yellow-200');
+                btn.classList.add('text-white');
             });
             
             // Highlight active nav button
-            event.target.classList.remove('text-gray-600');
-            event.target.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+            event.target.classList.remove('text-white');
+            event.target.classList.add('text-yellow-200');
         }
     </script>
 </body>
