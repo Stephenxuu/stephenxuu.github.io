@@ -8,16 +8,25 @@
     <style>
         .section { display: none; }
         .section.active { display: block; }
+        .profile-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-100 text-gray-800 font-sans">
     <!-- Navigation -->
-    <nav class="bg-yellow-800 shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 py-6">
-            <div class="flex space-x-12 justify-center">
-                <button onclick="showSection('home')" class="nav-btn text-xl font-medium text-white hover:text-yellow-200 transition-colors">Home</button>
-                <button onclick="showSection('cv')" class="nav-btn text-xl font-medium text-white hover:text-yellow-200 transition-colors">CV</button>
-                <button onclick="showSection('research')" class="nav-btn text-xl font-medium text-white hover:text-yellow-200 transition-colors">Research</button>
+    <nav class="bg-white shadow-lg border-b-2 border-blue-500">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex space-x-8 justify-center">
+                <button onclick="showSection('home')" class="nav-btn text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors px-4 py-2 rounded-lg hover:bg-blue-50">Home</button>
+                <a href="CV_Zixin_Stephen_Xu.pdf" download class="nav-btn text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors px-4 py-2 rounded-lg hover:bg-blue-50">CV</a>
+                <button onclick="showSection('research')" class="nav-btn text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors px-4 py-2 rounded-lg hover:bg-blue-50">Research</button>
             </div>
         </div>
     </nav>
@@ -25,30 +34,43 @@
     <main class="max-w-6xl mx-auto p-6">
         <!-- Home Section -->
         <div id="home" class="section active">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Left Column - Photo and Contact -->
-                <div class="md:col-span-1">
-                    <div class="bg-white rounded-lg shadow-sm p-6 sticky top-6">
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-lg p-6 sticky top-6 border border-gray-200">
                         <div class="text-center mb-6">
-                            <img src="stephen-photo.jpg" alt="Zixin (Stephen) Xu" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-lg border-4 border-white">
+                            <!-- Profile photo placeholder -->
+                            <div class="profile-placeholder w-40 h-40 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                                ZX
+                            </div>
                             <h1 class="text-2xl font-bold text-gray-900">Zixin (Stephen) Xu</h1>
-                            <p class="text-gray-600 mt-2">Ph.D. Candidate</p>
+                            <p class="text-blue-600 mt-2 font-medium">Ph.D. Candidate</p>
                             <p class="text-gray-600">Darden School of Business</p>
                             <p class="text-gray-600">University of Virginia</p>
                         </div>
                         
                         <div class="space-y-3 text-sm">
-                            <div>
-                                <a href="mailto:XuZ25@darden.virginia.edu" class="text-blue-600 hover:underline flex items-center">
-                                    📧 XuZ25@darden.virginia.edu
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                                <a href="mailto:XuZ25@darden.virginia.edu" class="text-blue-600 hover:text-blue-800 hover:underline">
+                                    XuZ25@darden.virginia.edu
                                 </a>
                             </div>
-                            <div>
-                                <span class="text-gray-600">📞 (+1) 771-219-5586</span>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                                <span class="text-gray-600">(+1) 771-219-5586</span>
                             </div>
-                            <div>
-                                <a href="https://www.linkedin.com/in/zixin-stephen-xu-553390162" class="text-blue-600 hover:underline flex items-center">
-                                    💼 LinkedIn
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+                                </svg>
+                                <a href="https://www.linkedin.com/in/zixin-stephen-xu-553390162" class="text-blue-600 hover:text-blue-800 hover:underline">
+                                    LinkedIn Profile
                                 </a>
                             </div>
                         </div>
@@ -56,12 +78,12 @@
                 </div>
 
                 <!-- Right Column - Content -->
-                <div class="md:col-span-2">
-                    <div class="bg-white rounded-lg shadow-sm p-8">
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
                         <div class="mb-8">
-                            <h2 class="text-2xl font-semibold mb-4 text-gray-900">About Me</h2>
+                            <h2 class="text-3xl font-bold mb-6 text-gray-900 border-b-2 border-blue-500 pb-2">About Me</h2>
                             <p class="text-lg leading-relaxed text-gray-700 mb-4">
-                                I'm currently pursuing my Ph.D. in Data Analytics and Decision Science at Darden School of Business, University of Virginia. I am fortunate to be advised by <a href="https://www.darden.virginia.edu/faculty-research/directory/manel-baucells" class="text-blue-600 hover:underline">Prof. Manel Baucells</a>. I got my Master degree from National University of Singapore (NUS), and undergraduate degree from Central University of Finance and Economics (CUFE). Before diving into my Ph.D., I worked for one year as a Product Manager at Tencent, and another year as a Research Associate at the CUHK-Shenzhen.
+                                I'm currently pursuing my Ph.D. in Data Analytics and Decision Science at Darden School of Business, University of Virginia. I am fortunate to be advised by <a href="https://www.darden.virginia.edu/faculty-research/directory/manel-baucells" class="text-blue-600 hover:text-blue-800 underline font-medium">Prof. Manel Baucells</a>. I got my Master degree from National University of Singapore (NUS), and undergraduate degree from Central University of Finance and Economics (CUFE). Before diving into my Ph.D., I worked for one year as a Product Manager at Tencent, and another year as a Research Associate at the CUHK-Shenzhen.
                             </p>
                             <p class="text-lg leading-relaxed text-gray-700">
                                 My research interests include decision making under uncertainty, sequential decision making, behavioral operations management, dynamic pricing, and mechanism design.
@@ -69,67 +91,78 @@
                         </div>
 
                         <div>
-                            <h2 class="text-2xl font-semibold mb-4 text-gray-900">Miscellaneous</h2>
-                            <p class="text-gray-700">
-                                I have a puppy named <a href="https://example.com/yuki-photo.png" target="_blank" class="text-blue-600 hover:underline">Yuki</a> 🐕
-                            </p>
+                            <h2 class="text-3xl font-bold mb-6 text-gray-900 border-b-2 border-blue-500 pb-2">Miscellaneous</h2>
+                            <div class="flex items-center space-x-4">
+                                <!-- Yuki photo placeholder -->
+                                <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                                    <span class="text-white text-2xl">🐕</span>
+                                </div>
+                                <p class="text-gray-700 text-lg">
+                                    I have a puppy named <span class="font-semibold text-blue-600">Yuki</span>!
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- CV Section -->
-        <div id="cv" class="section">
-            <div class="bg-white rounded-lg shadow-sm p-8 text-center">
-                <h1 class="text-3xl font-bold mb-8 text-gray-900">Curriculum Vitae</h1>
-                <p class="text-lg mb-6 text-gray-700">You can download my full CV here:</p>
-                <a href="CV_Zixin_Stephen_Xu.pdf" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-lg font-medium">
-                    📄 Download CV (PDF)
-                </a>
-            </div>
-        </div>
-
         <!-- Research Section -->
         <div id="research" class="section">
-            <div class="bg-white rounded-lg shadow-sm p-8">
-                <h1 class="text-3xl font-bold mb-8 text-gray-900">Research</h1>
+            <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+                <h1 class="text-4xl font-bold mb-8 text-gray-900 border-b-2 border-blue-500 pb-4">Research</h1>
                 
-                <section class="mb-8">
-                    <h2 class="text-2xl font-semibold border-b pb-2 border-blue-600 mb-4">Working Papers</h2>
-                    <ul class="space-y-4">
-                        <li>
-                            <em class="text-lg">On the Properties of the Metalog Distribution</em><br>
-                            <span class="text-gray-600">(Manel Baucells, Lonnie Chrisman, Thomas Keelin, Zixin Stephen Xu)</span><br>
-                            <span class="text-sm text-gray-500">Under review at Management Science</span>
-                        </li>
-                        <li>
-                            <em class="text-lg">BEACON: Bayesian Optimal Stopping for Efficient LLM Sampling</em><br>
-                            <span class="text-gray-600">(Guangya Wan<sub>*</sub>, Zixin Stephen Xu<sub>*</sub>, Sasa Zorc, Manel Baucells, Mengxuan Hu, Hao Wang, Sheng Li)</span><br>
-                            <span class="text-sm text-gray-500">Under review at NeurIPS 2025</span><br>
-                            <small class="text-xs text-gray-400"><sub>*</sub>Co-first authors with equal contributions</small>
-                        </li>
-                        <li>
-                            <em class="text-lg">Optimal Policies and Structural Properties Search Without Recall Under Normal Uncertainty</em><br>
-                            <span class="text-gray-600">(Zixin Stephen Xu, Manel Baucells, Sasa Zorc)</span><br>
-                            <span class="text-sm text-gray-500">In Preparation for Operations Research</span>
-                        </li>
-                    </ul>
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-6 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Working Papers
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-500 pl-6 py-4 bg-blue-50 rounded-r-lg">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">On the Properties of the Metalog Distribution</h3>
+                            <p class="text-gray-700 mb-2"><strong>Authors:</strong> Manel Baucells, Lonnie Chrisman, Thomas Keelin, Zixin Stephen Xu</p>
+                            <p class="text-sm text-blue-600 font-medium">Under review at Management Science</p>
+                        </div>
+                        <div class="border-l-4 border-blue-500 pl-6 py-4 bg-blue-50 rounded-r-lg">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">BEACON: Bayesian Optimal Stopping for Efficient LLM Sampling</h3>
+                            <p class="text-gray-700 mb-2"><strong>Authors:</strong> Guangya Wan<sub>*</sub>, Zixin Stephen Xu<sub>*</sub>, Sasa Zorc, Manel Baucells, Mengxuan Hu, Hao Wang, Sheng Li</p>
+                            <p class="text-sm text-blue-600 font-medium">Under review at NeurIPS 2025</p>
+                            <p class="text-xs text-gray-500 mt-1"><sub>*</sub>Co-first authors with equal contributions</p>
+                        </div>
+                        <div class="border-l-4 border-blue-500 pl-6 py-4 bg-blue-50 rounded-r-lg">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Optimal Policies and Structural Properties Search Without Recall Under Normal Uncertainty</h3>
+                            <p class="text-gray-700 mb-2"><strong>Authors:</strong> Zixin Stephen Xu, Manel Baucells, Sasa Zorc</p>
+                            <p class="text-sm text-blue-600 font-medium">In Preparation for Operations Research</p>
+                        </div>
+                    </div>
                 </section>
 
                 <section>
-                    <h2 class="text-2xl font-semibold border-b pb-2 border-blue-600 mb-4">Works in Progress</h2>
-                    <ul class="list-disc list-inside space-y-2">
-                        <li>Optimal Index Policies for Sequential Search: A Unified Framework Under Bayesian Learning</li>
-                        <li>Learning under Metalog Distribution</li>
-                        <li>Bayesian Updating with Forgetting in Online Reinforcement Learning</li>
-                    </ul>
+                    <h2 class="text-2xl font-bold text-blue-600 mb-6 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        </svg>
+                        Works in Progress
+                    </h2>
+                    <div class="grid gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="font-semibold text-gray-800">Optimal Index Policies for Sequential Search: A Unified Framework Under Bayesian Learning</h3>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="font-semibold text-gray-800">Learning under Metalog Distribution</h3>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h3 class="font-semibold text-gray-800">Bayesian Updating with Forgetting in Online Reinforcement Learning</h3>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <footer class="text-center text-sm text-gray-500 p-6">
+    <footer class="text-center text-sm text-gray-500 p-8 bg-white border-t border-gray-200 mt-12">
         &copy; 2025 Zixin (Stephen) Xu. All rights reserved.
     </footer>
 
@@ -145,14 +178,23 @@
             // Update navigation styling
             const navButtons = document.querySelectorAll('.nav-btn');
             navButtons.forEach(btn => {
-                btn.classList.remove('text-yellow-200');
-                btn.classList.add('text-white');
+                btn.classList.remove('text-blue-600', 'bg-blue-50');
+                btn.classList.add('text-gray-700');
             });
             
-            // Highlight active nav button
-            event.target.classList.remove('text-white');
-            event.target.classList.add('text-yellow-200');
+            // Highlight active nav button (only for buttons, not the CV link)
+            if (event.target.tagName === 'BUTTON') {
+                event.target.classList.remove('text-gray-700');
+                event.target.classList.add('text-blue-600', 'bg-blue-50');
+            }
         }
+        
+        // Set initial active state for Home button
+        document.addEventListener('DOMContentLoaded', function() {
+            const homeBtn = document.querySelector('button[onclick="showSection(\'home\')"]');
+            homeBtn.classList.add('text-blue-600', 'bg-blue-50');
+            homeBtn.classList.remove('text-gray-700');
+        });
     </script>
 </body>
 </html>
