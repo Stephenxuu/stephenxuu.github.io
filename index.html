@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephen Zixin Xu</title>
-    <meta name="description" content="Stephen Zixin Xu — Ph.D. Candidate in Data Analytics and Decision Science at the Darden School of Business, University of Virginia. Research in search theory, Bayesian learning, bandits, and data-driven pricing.">
+    <title>Stephen Zixin Xu — Ph.D. Candidate, UVA Darden</title>
+    <meta name="description" content="Stephen Zixin Xu is a Ph.D. candidate in Data Analytics and Decision Science at the Darden School of Business, University of Virginia. Research on sequential decision-making under uncertainty: search theory, Bayesian learning, multi-armed bandits, data-driven pricing, and inference-time computation for large language models.">
+    <meta name="author" content="Stephen Zixin Xu">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://stephenxuu.github.io/">
 
     <!-- Open Graph / link previews -->
     <meta property="og:type" content="profile">
-    <meta property="og:title" content="Stephen Zixin Xu">
-    <meta property="og:description" content="Ph.D. Candidate in Data Analytics and Decision Science at the Darden School of Business, University of Virginia.">
+    <meta property="og:title" content="Stephen Zixin Xu — Ph.D. Candidate, UVA Darden">
+    <meta property="og:description" content="Ph.D. candidate in Data Analytics and Decision Science at the Darden School of Business, University of Virginia. Research on sequential decision-making under uncertainty.">
     <meta property="og:url" content="https://stephenxuu.github.io/">
     <meta property="og:image" content="https://stephenxuu.github.io/stephen-photo.png">
     <meta name="twitter:card" content="summary">
@@ -29,7 +31,21 @@
         "@type": "CollegeOrUniversity",
         "name": "Darden School of Business, University of Virginia"
       },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "National University of Singapore"
+      },
       "email": "XuZ25@darden.virginia.edu",
+      "knowsAbout": [
+        "Operations Management",
+        "Sequential Decision-Making Under Uncertainty",
+        "Search Theory",
+        "Optimal Stopping",
+        "Bayesian Learning",
+        "Multi-Armed Bandits",
+        "Data-Driven Pricing",
+        "Inference-Time Computation for Large Language Models"
+      ],
       "sameAs": [
         "https://www.linkedin.com/in/zixin-stephen-xu-553390162/",
         "https://openreview.net/profile?id=~Zixin_Stephen_Xu1",
@@ -39,396 +55,413 @@
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-            font-size: 15px;
-            line-height: 1.6;
+        :root {
+            --bg: #fafafa;
+            --card: #ffffff;
+            --ink: #1a1a1a;
+            --body: #3f4651;
+            --muted: #6b7280;
+            --faint: #9ca3af;
+            --line: #e8eaed;
+            --line-soft: #f1f2f4;
+            --accent: #1d4ed8;
+            --accent-soft: #eff5ff;
         }
 
-        a { color: #2563eb; text-decoration: none; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--body);
+            font-size: 15px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
 
         /* Navigation */
         nav {
-            background: #fff;
-            border-bottom: 1px solid #e5e7eb;
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: saturate(180%) blur(12px);
+            -webkit-backdrop-filter: saturate(180%) blur(12px);
+            border-bottom: 1px solid var(--line);
             position: sticky;
             top: 0;
             z-index: 100;
         }
         .nav-inner {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             padding: 0 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 56px;
+            height: 58px;
         }
         .nav-brand {
             font-size: 15px;
-            font-weight: 600;
-            color: #111827;
+            font-weight: 700;
+            color: var(--ink);
             letter-spacing: -0.01em;
         }
-        .nav-links { display: flex; gap: 4px; }
-        .nav-btn {
-            font-family: inherit;
+        .nav-links { display: flex; gap: 2px; }
+        .nav-link {
             font-size: 14px;
             font-weight: 500;
-            color: #6b7280;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 6px 14px;
-            border-radius: 6px;
+            color: var(--muted);
+            padding: 7px 14px;
+            border-radius: 7px;
             transition: background 0.15s, color 0.15s;
         }
-        .nav-btn:hover { background: #f3f4f6; color: #111827; }
-        .nav-btn.active { background: #eff6ff; color: #1d4ed8; font-weight: 600; }
+        .nav-link:hover { background: var(--line-soft); color: var(--ink); text-decoration: none; }
+        .nav-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 
         /* Layout */
-        .page { display: none; }
-        .page.active { display: block; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
-
-        /* Home grid */
-        .home-grid {
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 48px 24px 24px;
             display: grid;
-            grid-template-columns: 220px 1fr;
-            gap: 32px;
+            grid-template-columns: 232px 1fr;
+            gap: 40px;
             align-items: start;
         }
 
         /* Sidebar */
         .sidebar {
-            background: #fff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 28px 22px;
-            text-align: center;
             position: sticky;
-            top: 76px;
+            top: 90px;
+            text-align: center;
         }
         .sidebar img.avatar {
-            width: 120px;
-            height: 120px;
+            width: 132px;
+            height: 132px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #e5e7eb;
-            margin-bottom: 14px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+            margin-bottom: 18px;
         }
         .sidebar h1 {
-            font-size: 16px;
+            font-size: 19px;
             font-weight: 700;
-            color: #111827;
-            line-height: 1.3;
-            margin-bottom: 4px;
+            color: var(--ink);
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
         }
         .sidebar .position {
             font-size: 13px;
-            color: #6b7280;
+            color: var(--muted);
             line-height: 1.5;
-            margin-bottom: 18px;
+            margin-bottom: 22px;
         }
-        .sidebar-links { display: flex; flex-direction: column; gap: 10px; text-align: left; }
+        .sidebar-links {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            text-align: left;
+            padding: 0 4px;
+        }
         .sidebar-link {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 9px;
             font-size: 13px;
-            color: #374151;
+            color: var(--body);
         }
-        .sidebar-link svg { flex-shrink: 0; color: #9ca3af; }
-        .sidebar-link a { color: #2563eb; }
-        .sidebar-link a:hover { text-decoration: underline; }
-        .sidebar-divider {
-            border: none;
-            border-top: 1px solid #f3f4f6;
-            margin: 18px 0;
-        }
+        .sidebar-link svg, .sidebar-link img { flex-shrink: 0; color: var(--faint); }
+        .sidebar-link a { color: var(--body); }
+        .sidebar-link a:hover { color: var(--accent); text-decoration: none; }
+        .sidebar-divider { border: none; border-top: 1px solid var(--line); margin: 22px 0; }
         .sidebar-cv {
             display: block;
             text-align: center;
-            font-size: 13px;
+            font-size: 13.5px;
             font-weight: 600;
-            color: #1d4ed8;
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            border-radius: 8px;
-            padding: 8px 0;
-            transition: background 0.15s;
+            color: #fff;
+            background: var(--accent);
+            border-radius: 9px;
+            padding: 10px 0;
+            transition: background 0.15s, transform 0.08s;
         }
-        .sidebar-cv:hover { background: #dbeafe; text-decoration: none; }
+        .sidebar-cv:hover { background: #1740b8; text-decoration: none; }
+        .sidebar-cv:active { transform: translateY(1px); }
 
-        /* Main card */
-        .main-card {
-            background: #fff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 36px 40px;
+        /* Main content */
+        main { min-width: 0; }
+        section { scroll-margin-top: 80px; margin-bottom: 26px; }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 34px 38px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
         }
-        .main-card h2 {
-            font-size: 18px;
+        .eyebrow {
+            font-size: 11.5px;
             font-weight: 700;
-            color: #111827;
-            margin-bottom: 14px;
-            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: var(--accent);
+            margin-bottom: 10px;
         }
-        .main-card p {
+        .card h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .card p { color: var(--body); font-size: 15px; line-height: 1.75; margin-bottom: 14px; }
+        .card p:last-child { margin-bottom: 0; }
+
+        /* Research interests chips */
+        .interests { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+        .chip {
+            font-size: 13px;
+            font-weight: 500;
             color: #374151;
-            font-size: 15px;
-            line-height: 1.75;
-            margin-bottom: 14px;
+            background: #f4f6f8;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 5px 13px;
         }
-        .main-card p:last-child { margin-bottom: 0; }
 
         /* Research */
-        .research-card {
-            background: #fff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 36px 40px;
-        }
-        .research-card > h1 {
-            font-size: 22px;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 30px;
-            letter-spacing: -0.02em;
-        }
-        .research-section { margin-bottom: 32px; }
-        .research-section:last-child { margin-bottom: 0; }
-        .research-section h2 {
+        .subhead {
             font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            color: #9ca3af;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e5e7eb;
-            margin-bottom: 20px;
+            color: var(--faint);
+            padding-bottom: 9px;
+            border-bottom: 1px solid var(--line);
+            margin: 30px 0 20px;
         }
-        .paper-list { display: flex; flex-direction: column; gap: 20px; }
-        .paper {
-            padding-left: 14px;
-            border-left: 3px solid #e5e7eb;
-        }
-        .paper-title {
-            font-size: 15px;
-            font-weight: 600;
-            color: #111827;
-            line-height: 1.4;
-            margin-bottom: 4px;
-        }
-        .paper-title a { color: #111827; }
-        .paper-title a:hover { color: #2563eb; }
-        .paper-authors {
-            font-size: 13px;
-            color: #6b7280;
-            margin-bottom: 5px;
-        }
+        .subhead:first-of-type { margin-top: 4px; }
+        .paper-list { display: flex; flex-direction: column; gap: 22px; }
+        .paper { padding-left: 16px; border-left: 3px solid #dfe3e8; }
+        .paper:hover { border-left-color: var(--accent); }
+        .paper-title { font-size: 15.5px; font-weight: 600; color: var(--ink); line-height: 1.45; margin-bottom: 5px; }
+        .paper-title a { color: var(--ink); }
+        .paper-title a:hover { color: var(--accent); }
+        .paper-authors { font-size: 13px; color: var(--muted); margin-bottom: 7px; }
+        .paper-desc { font-size: 13.5px; color: var(--body); line-height: 1.6; margin-bottom: 8px; }
         .paper-status {
             display: inline-block;
             font-size: 11.5px;
             font-weight: 600;
             color: #065f46;
             background: #d1fae5;
-            border-radius: 4px;
-            padding: 1px 7px;
+            border-radius: 5px;
+            padding: 2px 9px;
         }
-        .wip-list { display: flex; flex-direction: column; gap: 10px; }
-        .wip-item {
-            font-size: 15px;
-            color: #374151;
-            padding-left: 14px;
-            border-left: 3px solid #e5e7eb;
-        }
+        .wip-list { display: flex; flex-direction: column; gap: 12px; }
+        .wip-item { font-size: 15px; color: var(--body); padding-left: 16px; border-left: 3px solid #dfe3e8; }
 
         /* Miscellaneous */
-        .misc-card {
-            background: #fff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 36px 40px;
-        }
-        .misc-card h1 {
-            font-size: 22px;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 20px;
-        }
-        .misc-card p { color: #374151; margin-bottom: 20px; font-size: 15px; }
-        .misc-card img {
-            width: 260px;
-            height: 260px;
+        .misc-item { display: flex; gap: 28px; align-items: center; }
+        .misc-item.reverse { flex-direction: row-reverse; }
+        .misc-item + .misc-item { margin-top: 26px; padding-top: 26px; border-top: 1px solid var(--line-soft); }
+        .misc-photo {
+            width: 200px;
+            height: 200px;
             object-fit: cover;
-            border-radius: 12px;
-            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            border: 1px solid var(--line);
+            flex-shrink: 0;
+        }
+        .photo-placeholder {
+            width: 200px;
+            height: 200px;
+            border-radius: 14px;
+            border: 2px dashed #d1d5db;
+            background: #f7f8fa;
+            color: var(--faint);
+            font-size: 12.5px;
+            font-weight: 500;
+            text-align: center;
+            padding: 14px;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Footer */
-        footer {
-            text-align: center;
-            font-size: 12px;
-            color: #9ca3af;
-            padding: 32px 0 24px;
-        }
+        footer { text-align: center; font-size: 12px; color: var(--faint); padding: 28px 0 36px; }
 
         /* Responsive */
-        @media (max-width: 680px) {
-            .home-grid { grid-template-columns: 1fr; }
+        @media (max-width: 720px) {
+            .container { grid-template-columns: 1fr; gap: 28px; padding-top: 32px; }
             .sidebar { position: static; }
-            .main-card, .research-card, .misc-card { padding: 24px 20px; }
+            .card { padding: 26px 22px; }
             .nav-brand { display: none; }
+            .misc-item, .misc-item.reverse { flex-direction: column; align-items: flex-start; }
+            .misc-photo, .photo-placeholder { width: 100%; max-width: 280px; height: auto; aspect-ratio: 1; }
         }
     </style>
 </head>
 <body>
 
-<!-- Navigation -->
 <nav>
     <div class="nav-inner">
         <span class="nav-brand">Stephen Zixin Xu</span>
         <div class="nav-links">
-            <button class="nav-btn active" onclick="showSection('home', this)">Home</button>
-            <button class="nav-btn" onclick="showSection('research', this)">Research</button>
-            <button class="nav-btn" onclick="showSection('miscellaneous', this)">Miscellaneous</button>
+            <a href="#about" class="nav-link active">About</a>
+            <a href="#research" class="nav-link">Research</a>
+            <a href="#misc" class="nav-link">Misc</a>
         </div>
     </div>
 </nav>
 
-<!-- Home -->
-<div id="home" class="page active">
-    <div class="container">
-        <div class="home-grid">
-            <aside class="sidebar">
-                <img src="stephen-photo.png" alt="Stephen Zixin Xu" class="avatar">
-                <h1>Stephen Zixin Xu</h1>
-                <p class="position">
-                    Ph.D. Candidate<br>
-                    Darden School of Business<br>
-                    University of Virginia
-                </p>
-                <div class="sidebar-links">
-                    <div class="sidebar-link">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        <a href="mailto:XuZ25@darden.virginia.edu">XuZ25@darden.virginia.edu</a>
-                    </div>
-                    <div class="sidebar-link">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        <span>Charlottesville, VA</span>
-                    </div>
-                    <div class="sidebar-link">
-                        <img src="linkedin.png" alt="" width="14" height="14" style="opacity:0.55;">
-                        <a href="https://www.linkedin.com/in/zixin-stephen-xu-553390162" target="_blank">LinkedIn</a>
-                    </div>
-                </div>
-                <hr class="sidebar-divider">
-                <a href="CV_Stephen_Zixin_Xu.pdf" download class="sidebar-cv">Download CV</a>
-            </aside>
-
-            <div class="main-card">
-                <h2>About Me</h2>
-                <p>
-                    I am a Ph.D. candidate in Data Analytics and Decision Science at the Darden School of Business, University of Virginia, advised by <a href="https://www.darden.virginia.edu/faculty-research/directory/manel-baucells">Prof. Manel Baucells</a> and <a href="https://www.darden.virginia.edu/faculty-research/directory/sasa-zorc">Prof. Sasa Zorc</a>.
-                </p>
-                <p>
-                    My research develops theory for optimal sequential decision-making under uncertainty, with a focus on search theory, Bayesian learning, bandits, and data-driven pricing. A running theme is applying these frameworks to inference-time computation for large language models and to behavioral decision making. Before my Ph.D., I received an M.A. in Applied Economics from the National University of Singapore and worked as a Product Manager at Tencent and as a Research Associate at CUHK&#8209;Shenzhen.
-                </p>
-                <p>
-                    I serve as a referee for <em>Operations Research</em> and <em>Management Science</em>.
-                </p>
+<div class="container">
+    <aside class="sidebar">
+        <img src="stephen-photo.png" alt="Stephen Zixin Xu" class="avatar">
+        <h1>Stephen Zixin Xu</h1>
+        <p class="position">
+            Ph.D. Candidate<br>
+            Darden School of Business<br>
+            University of Virginia
+        </p>
+        <div class="sidebar-links">
+            <div class="sidebar-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:XuZ25@darden.virginia.edu">XuZ25@darden.virginia.edu</a>
+            </div>
+            <div class="sidebar-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Charlottesville, VA</span>
+            </div>
+            <div class="sidebar-link">
+                <img src="linkedin.png" alt="" width="14" height="14" style="opacity:0.55;">
+                <a href="https://www.linkedin.com/in/zixin-stephen-xu-553390162/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+            <div class="sidebar-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.42A12 12 0 0 1 12 21a12 12 0 0 1-6.16-10.42L12 14z"/></svg>
+                <a href="https://openreview.net/profile?id=~Zixin_Stephen_Xu1" target="_blank" rel="noopener">OpenReview</a>
+            </div>
+            <div class="sidebar-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+                <a href="https://www.darden.virginia.edu/phd/meet-the-students/stephen-xu" target="_blank" rel="noopener">Darden Profile</a>
             </div>
         </div>
-    </div>
-</div>
+        <hr class="sidebar-divider">
+        <a href="CV_Stephen_Zixin_Xu.pdf" class="sidebar-cv">Curriculum Vitae (PDF)</a>
+    </aside>
 
-<!-- Research -->
-<div id="research" class="page">
-    <div class="container">
-        <div class="research-card">
-            <h1>Research</h1>
+    <main>
+        <section id="about">
+            <div class="card">
+                <div class="eyebrow">About</div>
+                <h2>About Me</h2>
+                <p>
+                    I am a Ph.D. candidate in Data Analytics and Decision Science at the Darden School of Business, University of Virginia, advised by <a href="https://www.darden.virginia.edu/faculty-research/directory/manel-baucells" target="_blank" rel="noopener">Prof. Manel Baucells</a> and <a href="https://www.darden.virginia.edu/faculty-research/directory/sasa-zorc" target="_blank" rel="noopener">Prof. Sasa Zorc</a>.
+                </p>
+                <p>
+                    My research develops theory for optimal sequential decision-making under uncertainty, with a focus on search theory, Bayesian learning, multi-armed bandits, and data-driven pricing. A running theme is applying these frameworks to inference-time computation for large language models and to behavioral decision-making.
+                </p>
+                <p>
+                    Before my Ph.D., I received an M.A. in Applied Economics from the National University of Singapore and worked as a Product Manager at Tencent and as a Research Associate at CUHK&#8209;Shenzhen. I serve as a referee for <em>Operations Research</em> and <em>Management Science</em>.
+                </p>
+                <div class="interests">
+                    <span class="chip">Sequential decision-making</span>
+                    <span class="chip">Search theory &amp; optimal stopping</span>
+                    <span class="chip">Bayesian learning</span>
+                    <span class="chip">Multi-armed bandits</span>
+                    <span class="chip">Data-driven pricing</span>
+                    <span class="chip">Inference-time computation for LLMs</span>
+                    <span class="chip">Behavioral operations</span>
+                </div>
+            </div>
+        </section>
 
-            <div class="research-section">
-                <h2>Working Papers</h2>
+        <section id="research">
+            <div class="card">
+                <div class="eyebrow">Research</div>
+                <h2>Research</h2>
+
+                <div class="subhead">Working Papers</div>
                 <div class="paper-list">
-
                     <div class="paper">
                         <div class="paper-title">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5414554" target="_blank">
-                                Search without Recall and Gaussian Learning: Structural Properties and Optimal Policies
-                            </a>
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5414554" target="_blank" rel="noopener">Search without Recall and Gaussian Learning: Structural Properties and Optimal Policies</a>
                         </div>
                         <div class="paper-authors">Stephen Z. Xu, Manel Baucells, Sasa Zorc</div>
+                        <div class="paper-desc">Characterizes the structure of optimal stopping policies for sequential search when past offers cannot be recalled and the decision-maker learns about value through Gaussian signals.</div>
                         <span class="paper-status">Major Revision &mdash; <em>Operations Research</em></span>
                     </div>
 
                     <div class="paper">
                         <div class="paper-title">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5280979" target="_blank">
-                                On the Properties of the Metalog Distribution
-                            </a>
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5280979" target="_blank" rel="noopener">On the Properties of the Metalog Distribution</a>
                         </div>
                         <div class="paper-authors">Manel Baucells, Lonnie Chrisman, Thomas Keelin, Stephen Z. Xu</div>
+                        <div class="paper-desc">Studies the structural and analytical properties of the metalog family of flexible probability distributions.</div>
                     </div>
 
                     <div class="paper">
-                        <div class="paper-title">
-                            BEACON: Bayesian Optimal Stopping for Efficient LLM Sampling
-                        </div>
+                        <div class="paper-title">BEACON: Bayesian Optimal Stopping for Efficient LLM Sampling</div>
                         <div class="paper-authors">
                             Guangya Wan<sup>*</sup>, Stephen Z. Xu<sup>*</sup>, Sasa Zorc, Manel Baucells, Mengxuan Hu, Hao Wang, Sheng Li<br>
-                            <span style="font-size:12px; color:#9ca3af;">*Co-first authors with equal contributions</span>
+                            <span style="font-size:12px; color:var(--faint);">*Co-first authors with equal contributions</span>
                         </div>
+                        <div class="paper-desc">Applies Bayesian optimal stopping to inference-time sampling, deciding adaptively how many samples to draw from a large language model to balance answer quality against compute cost.</div>
                     </div>
-
                 </div>
-            </div>
 
-            <div class="research-section">
-                <h2>Works in Progress</h2>
+                <div class="subhead">Works in Progress</div>
                 <div class="wip-list">
                     <div class="wip-item">Optimal Index Policies for Sequential Search: A Unified Framework Under Bayesian Learning</div>
-                    <div class="wip-item">Bayesian Updating with Forgetting in Online Reinforcement Learning</div>
+                    <div class="wip-item">Characterizing Tractable Bayesian Experimentation: Exact Gittins and Whittle Indices</div>
+                    <div class="wip-item">Screening Ability through AI Usage: An Optimal Dynamic Contract</div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        </section>
 
-<!-- Miscellaneous -->
-<div id="miscellaneous" class="page">
-    <div class="container">
-        <div class="misc-card">
-            <h1>Miscellaneous</h1>
-            <p>I have a puppy named Yuki.</p>
-            <img src="yuki-photo.png" alt="Yuki">
-        </div>
-    </div>
+        <section id="misc">
+            <div class="card">
+                <div class="eyebrow">Beyond Research</div>
+                <h2>Miscellaneous</h2>
+                <div class="misc-item">
+                    <img src="yuki-photo.png" alt="Yuki, Stephen's puppy" class="misc-photo">
+                    <p>Outside of research, I spend time with my puppy, Yuki.</p>
+                </div>
+                <div class="misc-item reverse">
+                    <img src="poker-photo.png" alt="Stephen playing poker" class="misc-photo" onerror="this.style.display='none';">
+                    <p>I&rsquo;m also an avid poker player &mdash; a fitting hobby for someone who studies sequential decision-making under uncertainty.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </div>
 
 <footer>
-    &copy; 2026 Stephen Zixin Xu
+    &copy; 2026 Stephen Zixin Xu &middot; Charlottesville, VA
 </footer>
 
 <script>
-    function showSection(name, btn) {
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        document.getElementById(name).classList.add('active');
-        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-    }
+    // Scroll-spy: highlight the nav link for the section currently in view.
+    const links = document.querySelectorAll('.nav-link');
+    const sections = [...links].map(l => document.querySelector(l.getAttribute('href')));
+    const spy = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const id = e.target.id;
+                links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+            }
+        });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(s => s && spy.observe(s));
 </script>
 </body>
 </html>
